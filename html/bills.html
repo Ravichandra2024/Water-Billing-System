@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody {
+            background-color: #ffffff; 
+            color: #333333; 
+        }
+        tbody tr {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bill Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Bill Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="billTableBody">
+                <tr>
+                    <td>12-10-2020</td>
+                    <td>3000</td>
+                    <td>Paid</td>
+                </tr>
+                <tr>
+                    <td>12-11-2020</td>
+                    <td>3200</td>
+                    <td>Not&nbsp;Paid</td>
+                </tr>
+                <tr>
+                    <td>12-11-2020</td>
+                    <td>500</td>
+                    <td>Refunded</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

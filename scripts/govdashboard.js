@@ -1,0 +1,18 @@
+document.querySelector('#cls').addEventListener('click',function(eve){
+    document.querySelector('.left').style.display='none';
+});
+document.querySelector('#cls11').addEventListener('click',function(eve){
+    document.querySelector('.left').style.display='none';
+});
+document.querySelector('#cls21').addEventListener('click',function(eve){
+    document.querySelector('.left').style.display='none';
+});
+document.querySelector('#cls31').addEventListener('click',function(eve){
+    document.querySelector('.left').style.display='none';
+});
+document.querySelector('#cls41').addEventListener('click',function(eve){
+    document.querySelector('.left').style.display='none';
+});
+document.querySelector('#baropen').addEventListener('click',function(eve){
+    document.querySelector('.left').style.display='block';
+});

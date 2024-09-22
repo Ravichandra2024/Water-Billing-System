@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Enter Your Details</h1>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="id">WATER&nbsp;ID:</label>
+        <input type="text" id="id" name="id" required >
+        <label for="id">Phone&nbsp;Number:</label>
+        <input type="text" id="phno" name="id" required>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        <button id="hi" onclick="fun();return false;">submit</button>
+
+    </div>
+</body>
+<script>
+    function fun() {
+        var name = document.querySelector('#name').value;
+        var id = document.querySelector('#id').value;
+        var address = document.querySelector('#address').value;
+        var phno = document.querySelector('#phno').value;
+
+        if (name === '') {
+            alert('Enter your name');
+        } else if (id === '') {
+            alert('Enter your water id');
+        } else if (address === '') {
+            alert('Enter your address');
+        } else if (phno === '') {
+            alert('Enter your phone number');
+        } else {
+            addForm(name, id, address, phno);
+        }
+    }
+    function addForm(name, id, address, phno) {
+        var url = '/adddetails/'+name+'/'+id+'/'+phno+'/'+address
+        console.log(url)
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.success) {
+                    alert("Data updated successfully");
+
+                    parent.window.location.href = '/dashboard';
+                } else {
+                    alert('Failed to update the data');
+                }
+            })
+            .catch(error => {
+                console.log("Error:", error);
+                alert('An error occurred while submitting the form');
+            });
+    }    
+</script>
+</html>

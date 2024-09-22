@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ysabeau+Infant:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+.j{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    margin: 10px 70px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+video{
+ height: 250px;
+}
+.on{
+    text-transform: capitalize;
+    width: 60%;
+    font-size: large;
+    text-align: justify;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+.con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 30px;
+    height: 312px;
+}
+.con img{
+    width: 200px;
+    height: 150px;
+}
+.con p{
+    width: 200px;
+    text-align: justify;
+}
+.con a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background-color: orangered;
+    padding: 10px;
+    margin-top: 10px;
+}
+@media only screen and (max-width:800px){
+    .j{
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 500px) {
+    video{
+        width:200px;
+        height: 250px;
+       }
+    .j{
+        margin: 10px;
+        justify-content: center;
+    }
+    .j p{
+        font-size: small;
+    }
+    .on{
+        text-transform: capitalize;
+        font-size: small;
+        width: 100%;
+        text-align: justify;
+    }
+    .on h1{
+        font-size: medium;
+    }
+    .box{
+        overflow-x:auto;
+    }
+    .con{
+        margin: 5px;
+    }
+    .con img{
+        width: 100px;
+        height: 100px;
+    }
+    .con p{
+        width: 100px;
+        font-size: small;
+    }
+    .ji1{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+}
